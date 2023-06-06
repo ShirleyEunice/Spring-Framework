@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans
+	xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+						http://www.springframework.org/schema/context http://www.springframework.org/schema/spring-context.xsd">
+
+	<bean class="com.wiley.springcore.Student" name="std">
+		<property name="studentId" value="101"></property>
+		<property name="studentName" value="Shirley"></property>
+		<property name="studentAddress" value="VKV Nagar"></property>
+		<property name="course">
+			<list>
+				<value>JAVA</value>
+				<value>C++</value>
+				<value>Pearl</value>
+			</list>
+		</property>
+		<property name="gender">
+			<set>
+				<value>Male</value>
+				<value>Female</value>
+			</set>
+		</property>
+		<property name="state">
+			<map>
+				<entry key="1" value="Tamil Nadu"/>
+				<entry key="2" value="Karnataka"/>
+				<entry key="3" value="Andra Pradhesh"/>
+			</map>			
+		</property>
+	</bean>
+
+	<bean class="com.wiley.springcore.Student" name="std1">
+		<property name="studentId">
+			<value>103</value>
+		</property>
+		<property name="studentName">
+			<value>Bala</value>
+		</property>
+		<property name="studentAddress">
+			<value>Guru Nagar</value>
+		</property>
+		<property name="course">
+			<list>
+				<value>JAVA</value>
+				<value>C++</value>
+				<value>Pearl</value>
+			</list>
+		</property>
+		<property name="gender">
+			<set>
+				<value>Male</value>
+				<value>Female</value>
+			</set>
+		</property>
+		<property name="state">
+			<map>
+				<entry key="1" value="Tamil Nadu"/>
+				<entry key="2" value="Karnataka"/>
+				<entry key="3" value="Andra Pradhesh"/>
+			</map>			
+		</property>
+	</bean>
+
+	<bean
+		class="com.wiley.springcore.Student"
+		name="std2"
+		p:studentId="102"
+		p:studentName="Ashwin"
+		p:studentAddress="NGP Nagar"
+	>
+		<property name="course">
+			<list>
+				<value>JAVA</value>
+				<value>C++</value>
+				<value>Pearl</value>
+			</list>
+		</property>
+		<property name="gender">
+			<set>
+				<value>Male</value>
+				<value>Female</value>
+			</set>
+		</property>
+		<property name="state">
+			<map>
+				<entry key="1" value="Tamil Nadu"/>
+				<entry key="2" value="Karnataka"/>
+				<entry key="3" value="Andra Pradhesh"/>
+			</map>			
+		</property>
+	</bean>
+</beans>
